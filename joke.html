@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Joke Machine 😂</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.8rem;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+        }
+
+        .joke-btn {
+            font-size: 1.3rem;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            background: #fff;
+            color: #4a148c;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .joke-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+            background: #f8f9fa;
+        }
+
+        .joke-btn:active {
+            transform: translateY(1px);
+        }
+
+        #text {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            min-height: 140px;
+            font-size: 1.35rem;
+            line-height: 1.5;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+        }
+
+        #loading {
+            font-size: 1.4rem;
+            margin: 1.5rem 0;
+            min-height: 40px;
+            opacity: 0.9;
+        }
+
+        .emoji {
+            font-size: 2.8rem;
+            margin: 0 0.5rem;
+        }
+
+        @media (max-width: 500px) {
+            h1 { font-size: 2.4rem; }
+            .joke-btn { font-size: 1.1rem; padding: 14px 35px; }
+            #text { font-size: 1.2rem; padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Joke Machine <span class="emoji">🤡</span></h1>
+        <p class="subtitle">Ready for some terrible/great jokes? 😏</p>
+
+        <button class="joke-btn" onclick="giveMe()">Give me a joke! 🔥</button>
+
+        <p id="loading" style="display:none;">Thinking of something stupid... 🤔💭</p>
+
+        <div id="text">Click the button and prepare yourself 😂</div>
+    </div>
+
+    <script src="joke.js"></script>
+  
+
+</body>
+</html>
